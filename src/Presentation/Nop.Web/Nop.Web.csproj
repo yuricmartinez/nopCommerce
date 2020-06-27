@@ -47,7 +47,42 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Plugins\" />
+    <Folder Include="Plugins\DiscountRules.CustomerRoles\Views\" />
+    <Folder Include="Plugins\ExchangeRate.EcbExchange\" />
+    <Folder Include="Plugins\ExternalAuth.Facebook\" />
+    <Folder Include="Plugins\Payments.CheckMoneyOrder\Views\" />
+    <Folder Include="Plugins\Payments.Manual\Views\" />
+    <Folder Include="Plugins\Payments.PayPalStandard\" />
+    <Folder Include="Plugins\Payments.Qualpay\Areas\Admin\" />
+    <Folder Include="Plugins\Payments.Qualpay\Plugins\DiscountRules.CustomerRoles\" />
+    <Folder Include="Plugins\Payments.Qualpay\Plugins\ExchangeRate.EcbExchange\" />
+    <Folder Include="Plugins\Payments.Qualpay\Plugins\ExternalAuth.Facebook\" />
+    <Folder Include="Plugins\Payments.Qualpay\Plugins\Misc.SendinBlue\" />
+    <Folder Include="Plugins\Payments.Qualpay\Plugins\Payments.CheckMoneyOrder\" />
+    <Folder Include="Plugins\Payments.Qualpay\Plugins\Payments.Manual\" />
+    <Folder Include="Plugins\Payments.Qualpay\Plugins\Payments.PayPalStandard\" />
+    <Folder Include="Plugins\Payments.Qualpay\Plugins\Payments.Qualpay\Areas\Admin\" />
+    <Folder Include="Plugins\Payments.Qualpay\Plugins\Payments.Qualpay\Properties\" />
+    <Folder Include="Plugins\Payments.Qualpay\Plugins\Payments.Qualpay\Themes\DefaultClean\" />
+    <Folder Include="Plugins\Payments.Qualpay\Plugins\Payments.Square\Areas\Admin\" />
+    <Folder Include="Plugins\Payments.Qualpay\Plugins\Payments.Square\Properties\" />
+    <Folder Include="Plugins\Payments.Qualpay\Plugins\Payments.Square\Themes\DefaultClean\" />
+    <Folder Include="Plugins\Payments.Qualpay\Plugins\Pickup.PickupInStore\" />
+    <Folder Include="Plugins\Payments.Qualpay\Plugins\Shipping.FixedByWeightByTotal\" />
+    <Folder Include="Plugins\Payments.Qualpay\Plugins\Shipping.UPS\" />
+    <Folder Include="Plugins\Payments.Qualpay\Plugins\Tax.Avalara\Areas\Admin\" />
+    <Folder Include="Plugins\Payments.Qualpay\Plugins\Tax.Avalara\Properties\" />
+    <Folder Include="Plugins\Payments.Qualpay\Plugins\Tax.Avalara\Themes\DefaultClean\" />
+    <Folder Include="Plugins\Payments.Qualpay\Plugins\Tax.FixedOrByCountryStateZip\" />
+    <Folder Include="Plugins\Payments.Qualpay\Plugins\Widgets.GoogleAnalytics\" />
+    <Folder Include="Plugins\Payments.Qualpay\Plugins\Widgets.NivoSlider\" />
+    <Folder Include="Plugins\Payments.Qualpay\Properties\" />
+    <Folder Include="Plugins\Payments.Qualpay\Themes\DefaultClean\" />
+    <Folder Include="Plugins\Payments.Qualpay\Views\Customer\" />
+    <Folder Include="Plugins\Pickup.PickupInStore\Views\" />
+    <Folder Include="Plugins\Shipping.FixedByWeightByTotal\Views\" />
+    <Folder Include="Plugins\Shipping.UPS\" />
+    <Folder Include="Plugins\Tax.FixedOrByCountryStateZip\Views\" />
   </ItemGroup>
 
   <!-- This target execute after "Build" target.
