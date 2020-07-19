@@ -18,7 +18,7 @@
     <div class="footer-middle">
         <div class="container">
             <div class="row">
-                <div class="column my-account col-sm-3 col-md-3">
+                <div class="column my-account col-sm-4 col-md-4">
                     <div class="title">
                         <strong>@T("Footer.MyAccount")</strong>
                     </div>
@@ -29,7 +29,7 @@
                         }
                         @if (Model.DisplayCustomerOrdersFooterItem)
                         {
-                            <li><a href="@Url.RouteUrl("CustomerOrders")"><i class="fa fa-angle-double-right"></i>@T("Account.CustomerOrders")</a></li>
+                            <li><a href="@Url.RouteUrl("CustomerOrders")"><i class="fa fa-angle-double-right"></i>Meus @T("Account.CustomerOrders")</a></li>
                         }
                         @if (Model.DisplayCustomerAddressesFooterItem)
                         {
@@ -47,44 +47,17 @@
                         {
                             <li><a href="@Url.RouteUrl("Topic", new { SeName = topic.SeName })"><i class="fa fa-angle-double-right"></i>@topic.Name</a></li>
                         }
-                    </ul>
-                </div>
-                <div class="column customer-service col-sm-3 col-md-3">
-                    <div class="title">
-                        <strong>@T("Footer.CustomerService")</strong>
-                    </div>
-                    <ul class="nav nav-list">
-                        @if (Model.NewsEnabled && Model.DisplayNewsFooterItem)
+                        @if (Model.CompareProductsEnabled && Model.DisplayCompareProductsFooterItem)
                         {
-                            <li><a href="@Url.RouteUrl("NewsArchive")"><i class="fa fa-angle-double-right"></i>@T("News")</a></li>
+                            <li><a href="@Url.RouteUrl("CompareProducts")"><i class="fa fa-angle-double-right"></i>@T("Products.Compare.List")</a></li>
                         }
-                        @if (Model.BlogEnabled && Model.DisplayBlogFooterItem)
+                        @if (Model.RecentlyViewedProductsEnabled && Model.DisplayRecentlyViewedProductsFooterItem)
                         {
-                            <li><a href="@Url.RouteUrl("Blog")"><i class="fa fa-angle-double-right"></i>@T("Blog")</a></li>
-                        }
-                        @if (Model.ForumEnabled && Model.DisplayForumsFooterItem)
-                        {
-                            <li><a href="@Url.RouteUrl("Boards")"><i class="fa fa-angle-double-right"></i>@T("Forum.Forums")</a></li>
-                        }
-                        @foreach (var topic in Model.Topics.Where(x => x.IncludeInFooterColumn2).ToList())
-                        {
-                            <li><a href="@Url.RouteUrl("Topic", new { SeName = topic.SeName })"><i class="fa fa-angle-double-right"></i>@topic.Name</a></li>
-                        }
-                        @if (Model.SitemapEnabled && Model.DisplaySitemapFooterItem)
-                        {
-                            <li><a href="@Url.RouteUrl("Sitemap")"><i class="fa fa-angle-double-right"></i>@T("Sitemap")</a></li>
-                        }
-                        @if (Model.DisplayContactUsFooterItem)
-                        {
-                            <li><a href="@Url.RouteUrl("ContactUs")"><i class="fa fa-angle-double-right"></i>@T("ContactUs")</a></li>
-                        }
-                        @if (Model.AllowCustomersToCheckGiftCardBalance)
-                        {
-                            <li><a href="@Url.RouteUrl("CheckGiftCardBalance")"><i class="fa fa-angle-double-right"></i>@T("CheckGiftCardBalance")</a></li>
+                            <li><a href="@Url.RouteUrl("RecentlyViewedProducts")"><i class="fa fa-angle-double-right"></i>@T("Products.RecentlyViewedProducts")</a></li>
                         }
                     </ul>
                 </div>
-                <div class="column information col-sm-3 col-md-3">
+                <div class="column information col-sm-4 col-md-4">
                     <div class="title">
                         <strong>@T("Footer.Information")</strong>
                     </div>
@@ -99,27 +72,45 @@
                         }
                     </ul>
                 </div>
-                <div class="column contact-wrapper col-sm-3 col-md-3">
+                <div class="column contact-wrapper col-sm-4 col-md-4">
                     <div class="title">
-                        <strong>Nossas Ofertas</strong>
+                        <a id="contact"></a>
+                        <strong>Central de Atendimento</strong>
                     </div>
                     <ul class="nav nav-list">
-                        @if (Model.DisplayProductSearchFooterItem)
+                        @if (Model.DisplayContactUsFooterItem)
                         {
-                            <li><a href="@Url.RouteUrl("ProductSearch")"><i class="fa fa-angle-double-right"></i>@T("Search")</a> </li>
+                            <li><a href="@Url.RouteUrl("ContactUs")"><i class="fa fa-angle-double-right"></i>Formul&aacute;rio para contato</a></li>
                         }
-                        @if (Model.RecentlyViewedProductsEnabled && Model.DisplayRecentlyViewedProductsFooterItem)
-                        {
-                            <li><a href="@Url.RouteUrl("RecentlyViewedProducts")"><i class="fa fa-angle-double-right"></i>@T("Products.RecentlyViewedProducts")</a></li>
-                        }
-                        @if (Model.CompareProductsEnabled && Model.DisplayCompareProductsFooterItem)
-                        {
-                            <li><a href="@Url.RouteUrl("CompareProducts")"><i class="fa fa-angle-double-right"></i>@T("Products.Compare.List")</a></li>
-                        }
-                        @if (Model.NewProductsEnabled && Model.DisplayNewProductsFooterItem)
-                        {
-                            <li><a href="@Url.RouteUrl("NewProducts")"><i class="fa fa-angle-double-right"></i>@T("Products.NewProducts")</a></li>
-                        }
+                        <li class="tel-zap">
+                            <a style="color: #333;" href="https://wa.me/5548991257076" target="_blank" rel="noopener">
+                                <span class="telefone-n">
+                                    <i class="fa fa-whatsapp" style="color: #333;"></i>
+                                    <strong>WhatsApp</strong>:
+                                </span>
+                                <p>(48) 99125-7076</p>
+                            </a>
+                        </li>
+                        <li class="tel-tel">
+                            <a style="color: #333;" href="tel:(48) 99125-7076" target="_blank" rel="noopener">
+                                <span class="telefone-n">
+                                    <i class="fa fa-phone" style="color: #333;"></i>
+                                    <strong>Telefone</strong>:
+                                </span>
+                                <p>(48) 99125-7076</p>
+                            </a>
+                        </li>
+                        <li class="tel-mail">
+                            <a id="mail-send-footer" style="color: #333;" href="#" target="_blank" rel="noopener">
+                                <span class="email-n">
+                                    <i class="fa fa-envelope" style="color: #333;"></i>
+                                    <strong>E-mail:</strong>
+                                </span>
+                                <p>
+                                    <span class="contact-mail" data-user="otatnoc" data-website="rb.moc.tfosdk"></span>
+                                </p>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -128,23 +119,30 @@
     <div class="footer-lower">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-4 col-md-4">
-                    <a href="https://wa.me/5548991257076" target="_blank" rel="noopener">
-                        <div class="payment-method">
-
+                <div class="col-xs-12 col-sm-4 col-md-4 footer-store-partner">
+                    <a href="https://www.microsoft.com/pt-br/solution-providers/partnerdetails/kd-informatica-ltda_a85726c4-1321-4994-9c54-969fad51f773/3d724380-ea71-4b36-a1d9-8a92b7d065b0" target="_blank" rel="noopener">
+                        <div class="partner-logo">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 footer-store-partner2">
+                    <a href="https://www.microsoft.com/pt-br/solution-providers/partnerdetails/kd-informatica-ltda_a85726c4-1321-4994-9c54-969fad51f773/3d724380-ea71-4b36-a1d9-8a92b7d065b0" target="_blank" rel="noopener">
+                        <div class="partner-logo-center">
                         </div>
                     </a>
                 </div>
                 <div class="col-xs-12 col-sm-4 col-md-4 footer-store-theme">
                     <div class="footer-disclaimer">
-                        @T("Content.CopyrightNotice", DateTime.Now.Year.ToString(), Model.StoreName)
+                        @T("Content.CopyrightNotice", DateTime.Now.Year.ToString(), Model.StoreName)<br/>CNPJ: 10.554.873/0001-08
                     </div>
                     @await Component.InvokeAsync("StoreThemeSelector")
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-4">
-                    <div class="designedby pull-right">
-                        
-                    </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 payment-method">
+                    <a href="payment-info" target="_self">
+                        <div class="payment-method-1">
+
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>

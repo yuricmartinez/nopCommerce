@@ -118,6 +118,146 @@
                                     dataDictAddToCart.TemplateInfo.HtmlFieldPrefix = $"addtocart_{Model.Id}";
                                     @await Html.PartialAsync("_AddToCart", Model.AddToCart, dataDictAddToCart)
                                 }
+                                <div class="parcelas-produto  borda-alpha">
+                                    <ul class="accordion" id="formas-pagamento-lista">
+                                        <li class="accordion-group">
+                                            <div class="accordion-heading">
+                                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#formas-pagamento-lista" href="#pagarme">
+                                                    <span class="text-parcelas pull-right cor-secundaria">Parcelas <span class="glyphicon glyphicon-chevron-down"></span></span>
+                                                    <img src="https://cdn.awsli.com.br/production/static/img/formas-de-pagamento/pagarme-cards.png?v=7348202" alt="American Express, Visa, Diners, Mastercard, Aura, Hipercard, Elo, JCB">
+                                                </a>
+                                            </div>
+                                            <div id="pagarme" class="accordion-body in collapse">
+                                                <div class="accordion-inner">
+                                                    <!--googleoff: all-->
+                                                    <ul style="text-align: left;">
+                                                        <li>
+                                                            <span>
+                                                                <b>1x</b>
+                                                                de R$ <b id="parcela-p-1-sem-juros"></b>
+                                                                <!--googleoff: all-->
+                                                                sem juros
+
+                                                                <!--googleon: all-->
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span>
+                                                                <b >2x</b>
+                                                                de R$ <b id="parcela-p-2-sem-juros"></b>
+                                                                <!--googleoff: all-->
+                                                                sem juros
+                                                                <!--googleon: all-->
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span>
+                                                                <b>3x</b>
+                                                                de R$ <b id="parcela-p-3-sem-juros"></b>
+                                                                <!--googleoff: all-->
+                                                                sem juros
+                                                                <!--googleon: all-->
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span>
+                                                                <b>4x</b>
+                                                                de R$ <b id="parcela-p-4-sem-juros"></b>
+                                                                <!--googleoff: all-->
+                                                                sem juros
+                                                                <!--googleon: all-->
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span>
+                                                                <b>5x</b>
+                                                                de R$ <b id="parcela-p-5-sem-juros"></b>
+                                                                <!--googleoff: all-->
+                                                                sem juros
+                                                                <!--googleon: all-->
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span>
+                                                                <b>6x</b>
+                                                                de R$ <b id="parcela-p-6-sem-juros"></b>
+                                                                <!--googleoff: all-->
+                                                                sem juros
+                                                                <!--googleon: all-->
+                                                            </span>
+                                                        </li>
+                                                    </ul>
+                                                    <ul style="text-align: left;">
+                                                        <li>
+                                                            <span>
+                                                                <b>7x</b>
+                                                                de R$ <b id="parcela-p-7-sem-juros"></b>
+                                                                <!--googleoff: all-->
+                                                                sem juros
+                                                                <!--googleon: all-->
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span>
+                                                                <b>8x</b>
+                                                                de R$ <b id="parcela-p-8-sem-juros"></b>
+                                                                <!--googleoff: all-->
+                                                                sem juros
+                                                                <!--googleon: all-->
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span>
+                                                                <b>9x</b>
+                                                                de R$ <b id="parcela-p-9-sem-juros"></b>
+                                                                <!--googleoff: all-->
+                                                                sem juros
+                                                                <!--googleon: all-->
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span>
+                                                                <b>10x</b>
+                                                                de R$ <b id="parcela-p-10-sem-juros"></b>
+                                                                <!--googleoff: all-->
+                                                                sem juros
+                                                                <!--googleon: all-->
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span>
+                                                                <b>11x</b>
+                                                                de R$ <b id="parcela-p-11-sem-juros"></b>
+                                                                <!--googleoff: all-->
+                                                                sem juros
+                                                                <!--googleon: all-->
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span>
+                                                                <b>12x</b>
+                                                                de R$ <b id="parcela-p-12-sem-juros"></b>
+                                                                <!--googleoff: all-->
+                                                                sem juros
+                                                                <!--googleon: all-->
+                                                            </span>
+                                                        </li>
+                                                    </ul>
+                                                    <!--googleon: all-->
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="accordion-group">
+                                            <div class="accordion-heading">
+                                                <span class="accordion-toggle">
+                                                    <b  id="parcela-a-vista" class="text-parcelas pull-right"></b>
+                                                    <img src="https://cdn.awsli.com.br/production/static/img/formas-de-pagamento/boleto-logo.png?v=7348202" alt="Boleto Bancário">
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <br />
+                                </div>
                                 <div class="overview-buttons">
                                     <!--wishlist, compare, email a friend-->
                                     @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ProductDetailsInsideOverviewButtonsBefore, additionalData = Model })
@@ -134,6 +274,51 @@
                                 @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ProductDetailsOverviewBottom, additionalData = Model })
                             </div>
                         </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3  blockreassurance_product">
+                            <span class="item-product">
+                                <img src="/images/uploaded/nfe.png">
+                                &nbsp;
+                            </span>
+                            <span class="block-title">Nota Fiscal Eletrônica</span>
+                            <p>Produtos com Nota Fiscal Eletrônica.</p>
+                        </div>
+                        <div class="col-md-2 blockreassurance_product" onclick="window.open('https://api.whatsapp.com/send?phone=5548991257076')">
+                            <span class="item-product">
+                                <img src="/images/uploaded/whatsapp.png">
+                                &nbsp;
+                            </span>
+                            <span>Fale Conosco</span>
+                            <p>Tem dúvidas? Fale conosco no WhatsApp. Clique aqui.</p>
+                        </div>
+                        <div class="col-md-2 blockreassurance_product">
+                            <span class="item-product">
+                                <img src="/images/uploaded/esd-microsoft.png">
+                                &nbsp;
+                            </span>
+                            <span class="block-title">ESD - Entrega Digital</span>
+                            <p>Chave do produto de 25 dígitos. Pode vincular a sua conta Microsoft.</p>
+                        </div>
+                        <div class="col-md-2 blockreassurance_product" onclick="window.open('https://www.microsoft.com/pt-br/solution-providers/partnerdetails/kd-informatica-ltda_a85726c4-1321-4994-9c54-969fad51f773/3d724380-ea71-4b36-a1d9-8a92b7d065b0')">
+                            <span class="item-product">
+                                <img src="/images/uploaded/parceiro-microsoft.png">
+                                &nbsp;
+                            </span>
+                            <span class="block-title">Somos Partner Microsoft</span>
+                            <p>Clique aqui para ver nossa autorização.</p>
+                        </div>
+                        <div class="col-md-3 blockreassurance_product">
+                            <span class="item-product">
+                                <img src="/images/uploaded/licencas-microsoft.png">
+                                &nbsp;
+                            </span>
+                            <span class="block-title">Licenças Genuínas Microsoft</span>
+                            <p>Nossas licenças são geradas em sistema de revenda da Microsoft.</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="row">
                         <div class="col-md-12 product-details-tabs">
                             <ul class="nav nav-tabs">
                                 @if (!string.IsNullOrEmpty(Model.FullDescription))

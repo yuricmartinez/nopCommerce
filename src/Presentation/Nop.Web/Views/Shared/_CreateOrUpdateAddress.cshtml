@@ -32,6 +32,18 @@
             <span asp-validation-for="Company"></span>
         </div>
     }
+    @if (Model.ZipPostalCodeEnabled)
+    {
+        <div class="inputs">
+            <label asp-for="ZipPostalCode" asp-postfix=":"></label>
+            <input asp-for="ZipPostalCode" />
+            @if (Model.ZipPostalCodeRequired)
+            {
+                <nop-required />
+            }
+            <span asp-validation-for="ZipPostalCode"></span>
+        </div>
+    }
     @if (Model.CountryEnabled)
     {
         <div class="inputs">
@@ -103,18 +115,7 @@
             <span asp-validation-for="Address2"></span>
         </div>
     }
-    @if (Model.ZipPostalCodeEnabled)
-    {
-        <div class="inputs">
-            <label asp-for="ZipPostalCode" asp-postfix=":"></label>
-            <input asp-for="ZipPostalCode" />
-            @if (Model.ZipPostalCodeRequired)
-            {
-                <nop-required />
-            }
-            <span asp-validation-for="ZipPostalCode"></span>
-        </div>
-    }
+   
     @if (Model.PhoneEnabled)
     {
         <div class="inputs">
